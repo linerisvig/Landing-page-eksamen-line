@@ -1,2 +1,8 @@
-# Landing-page-eksamen-line
-Landing Page til 1. semester eksamen - Line Ø. Risvig
+# landingpage-case
+Landingpage (Pulse Athletics). 
+
+Gruppe: Frederik, Jonas, Silje og Line.
+
+Project title: Pulse Athletics Landing Page
+
+*ref. PERSONA.md & COMPANY.md for additional information*
