@@ -25,6 +25,7 @@ button {
 
 /* Lineær navigationen */
 .site-header {
+  position: relative;
   padding: 24px 48px 40px;
 
   background: linear-gradient(
@@ -38,7 +39,7 @@ button {
 
 /* Navigation */
 .navbar-container {
-  position: relative;
+  position: static;
 
   display: grid;
   grid-template-columns: 40px 1fr auto 1fr;
@@ -90,18 +91,22 @@ button {
   height: auto;
 }
 
-/* Menuen er skjult, indtil den åbnes */
+/* Jeg skjuler menuen, indtil brugeren åbner den */
 .nav-menu {
   display: none;
 
+  /* Jeg placerer menuen under burgerknappen */
   position: absolute;
-  top: 60px;
-  left: 0;
-  z-index: 10;
+  top: 78px;
+  left: 48px;
+  z-index: 100;
 
-  width: 230px;
+  /* Jeg giver menuen en fjerdedel af vinduets bredde */
+  width: 25vw;
+  max-width: calc(100% - 40px);
+
   margin: 0;
-  padding: 24px;
+  padding: 12px 0;
 
   list-style: none;
   background-color: #373636;
@@ -112,16 +117,23 @@ button {
 .nav-menu.active {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
 }
 
+/* Jeg gør hele rækken klikbar */
 .nav-menu a {
+  display: block;
+  padding: 16px 24px;
+
   color: white;
+  font-size: 22px;
   text-decoration: none;
 }
 
+/* Jeg fremhæver linket, når musen er over det */
 .nav-menu a:hover {
   text-decoration: underline;
+  background-color: #579163;
 }
 
 /* Teksten oven på billedet */
@@ -144,8 +156,9 @@ button {
   max-width: 620px;
   margin: 0 0 48px;
 
-  color: #7bb476;
+  color: #8cd69b;
   font-size: 32px;
+  font-weight: 600;
   line-height: 1.6;
   letter-spacing: 3px;
 }
@@ -159,7 +172,7 @@ button {
   padding: 16px 48px;
   border-radius: 50px;
 
-  background-color: #4a8055;
+  background-color: #579163;
   color: white;
 
   font-size: 28px;
@@ -183,6 +196,55 @@ button:focus-visible {
   outline: 3px solid white;
   outline-offset: 5px;
 }
+
+
+
+
+
+
+
+
+/* Jeg gør burgerknappen til udgangspunkt for krydsets streger */
+.burger {
+  position: relative;
+}
+
+/* Jeg flytter den øverste streg og drejer den */
+.burger.active span:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+/* Jeg skjuler den midterste streg */
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+/* Jeg flytter den nederste streg og drejer den modsat */
+.burger.active span:nth-child(3) {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  transform: rotate(-45deg);
+}
+
+/* Jeg tilpasser selve menuens placering og bredde på mobil */
+@media (max-width: 700px) {
+  .nav-menu {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+
+
+
+
+
+
+
 
 /* Tilpasning til mindre skærme */
 @media (max-width: 700px) {
