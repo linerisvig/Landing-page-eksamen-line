@@ -1,7 +1,7 @@
-# landingpage-case
+# Landing-page-eksamen-line
 Landingpage (Pulse Athletics). 
 
-Gruppe: Frederik, Jonas, Silje og Line.
+1. semester eksamen - Line Østergaard Risvig
 
 Project title: Pulse Athletics Landing Page
 
