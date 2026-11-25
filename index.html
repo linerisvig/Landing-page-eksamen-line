@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -29,9 +30,9 @@
         <div class="navbar-container">
          <!-- Burgerikon -->
           <button class="burger" id="burgerbutton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
+            <span class="burger-line line-top"></span>
+            <span class="burger-line line-middle"></span>
+            <span class="burger-line line-bottom"></span>
           </button>
 
           <!-- Tekst ved siden af burgerikonet -->
@@ -89,6 +90,34 @@
 
 
   <main>
+
+    <!-- Jeg viser to bevægelige billedrækker i mp4 format med sloganet imellem -->
+    <section class="brand-section" aria-labelledby="brand-heading">
+
+      <!-- autoplay = browseren starter videoen automatisk -->
+      <!-- muted = videoen spilles uden lyd -->
+      <!-- loop = videoen gentages -->
+      <!-- playsinline = videoen afspilles inline i browseren på mobil -->
+
+      <!-- Øverste billedrække -->
+      <video class="brand-video-højre" autoplay muted loop playsinline aria-hidden="true">
+        <source src="Eksamen-billeder/PULSE-mod-hoejre.mp4" type="video/mp4">
+      </video>
+
+      <!-- Jeg beholder sloganet som rigtig tekst -->
+      <h2 id="brand-heading">Every Beat Counts.</h2>
+
+      <!-- Nederste billedrække -->
+      <video class="brand-video-venstre" autoplay muted loop playsinline aria-hidden="true">
+        <source src="Eksamen-billeder/PULSE-mod-venstre.mp4" type="video/mp4">
+      </video>
+
+    </section>
+
+
+
+
+
 
   </main>
 
