@@ -298,6 +298,21 @@ button {
 }
 
 
+/* TRUSTPILOT LOGO */
+
+.trustpilot {
+  display: block; /* Jeg placerer linket på sin egen linje */
+  width: fit-content; /* Jeg lader linkets bredde følge indholdet */
+  max-width: 100%; 
+  margin-top: 100px; /* Jeg giver luft over Trustpilot-grafikken */
+}
+
+.trustpilot img {
+  display: block;
+  width: 280px;
+  max-width: 100%; /* Jeg lader billedet blive mindre ved pladsmangel */
+  height: auto;
+}
 
 
 /* HER STARTER VIDEOERNE OG SLOGANET */
