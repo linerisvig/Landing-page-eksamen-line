@@ -52,3 +52,19 @@ document.addEventListener("keydown", function (event) {
     burgerbutton.focus();
   }
 });
+
+// Jeg finder navigationen.
+const stickyHeader = document.querySelector(".site-header");
+
+// Jeg holder øje med navigationens højde.
+const headerObserver = new ResizeObserver(function () {
+
+  // Højden bliver gemt som en CSS-variabel for hele siden.
+  document.documentElement.style.setProperty(
+    "--header-height",
+    stickyHeader.offsetHeight + "px"
+  );
+});
+
+// Jeg starter målingen og opdaterer den, hvis højden ændrer sig.
+headerObserver.observe(stickyHeader);

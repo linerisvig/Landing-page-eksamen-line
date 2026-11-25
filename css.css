@@ -11,7 +11,11 @@
   --white: #ffffff;
   --black: #000000;
   --background-dark: #171717;
-  --carbon: #373636;
+  --pulse-carbon: #373636;
+
+  /* Øvrige produktfarver */
+  --pulse-sand: ##E4DACA;
+  --pulse-blush: ##F3BBB6;
 }
 
 
@@ -34,6 +38,8 @@ button {
 .hero {
   min-height: 100vh; /* minimumshøjden er 100% af vinduets højde */
   color: var(--white);
+  margin-top: calc(-1 * var(--header-height, 0px)); /* Jeg trækker heroen op bag navigationen */
+  padding-top: var(--header-height, 0px); /* Jeg holder hero-teksten fri af navigationen */
 
   background-color: var(--background-dark); /* Mørk baggrund bag billedet */
   background-image: url("Eksamen-billeder/Hero-baggrund.png");
@@ -43,8 +49,13 @@ button {
 
 /* Lineær navigationen */
 .site-header {
-  position: relative;
+  position: sticky; /* Navigationen følger ned før man scroller */
+  top: 0; /* Den bliver ved vinduets øverste kant */
+  z-index: 1000; /* Navigationen kommer foran alt indhold */
+
   padding: 24px 48px 40px; /* Top , sider og bund */
+
+  color: var(--white); /* Navigationens tekst bliver hvid */
 
   background: linear-gradient(
     to bottom,
@@ -205,7 +216,7 @@ button {
   padding: 12px 0;
 
   list-style: none; /* ingen listepunkter */
-  background-color: var(--carbon);
+  background-color: var(--pulse-carbon);
   border-radius: 12px; /* Afrunder hjørnerne */
 }
 
@@ -357,7 +368,7 @@ button {
 
 /* Jeg giver footeren en grå baggrund og hvid tekst */
 .site-footer {
-  background-color: var(--carbon);
+  background-color: var(--pulse-carbon);
   color: var(--white);
   padding: 60px 48px 40px;
 }
